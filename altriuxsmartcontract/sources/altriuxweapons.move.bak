@@ -1,0 +1,164 @@
+module altriux::altriuxmilitaryitems {
+    use sui::object::{Self, UID};
+    use sui::table::{Self, Table};
+    use sui::tx_context::{Self, TxContext};
+    use altriux::altriuxresources::{Inventory, consume_jax};
+    use sui::event;
+
+    // === WEAPON CATEGORIES ===
+    const CATEGORY_RANGED: u8 = 1;
+    const CATEGORY_MELEE: u8 = 2;
+    const CATEGORY_ARMOR: u8 = 3;
+
+    // === WEAPON TYPES ===
+    const WEAPON_BOW_SHORT: u64 = 101;
+    const WEAPON_BOW_LONG: u64 = 102;
+    const WEAPON_CROSSBOW: u64 = 103;
+    const WEAPON_LONGBOW: u64 = 104;
+    const WEAPON_COMPOSITE_BOW: u64 = 105;
+    const WEAPON_SLING: u64 = 106;
+    const WEAPON_JAVELIN: u64 = 107;
+    const WEAPON_ATLATL: u64 = 108;
+
+    const WEAPON_DAGGER_SMALL: u64 = 201;
+    const WEAPON_DAGGER_FIGHTING: u64 = 202;
+    const WEAPON_SHORT_SWORD: u64 = 203;
+    const WEAPON_LONG_SWORD: u64 = 204;
+    const WEAPON_BASTARD_SWORD: u64 = 205;
+    const WEAPON_SCIMITAR: u64 = 206;
+    const WEAPON_FALCHION: u64 = 207;
+    const WEAPON_GREATSWORD: u64 = 208;
+    const WEAPON_MACE: u64 = 209;
+    const WEAPON_WAR_HAMMER: u64 = 210;
+    const WEAPON_BATTLE_AXE: u64 = 211;
+
+    const WEAPON_SPEAR_SHORT: u64 = 301;
+    const WEAPON_SPEAR_LONG: u64 = 302;
+    const WEAPON_PIKE: u64 = 303;
+    const WEAPON_HALBERD: u64 = 304; 
+    const WEAPON_LANCE: u64 = 305;
+
+    const ARMOR_SHIELD_SMALL: u64 = 401;
+    const ARMOR_SHIELD_LARGE: u64 = 402;
+    const ARMOR_HELMET_LEATHER: u64 = 403;
+    const ARMOR_HELMET_IRON: u64 = 404;
+    const ARMOR_CHAINMAIL: u64 = 405;
+
+    // === RESOURCE CONSTANTS ===
+    const JAX_WOOD: u64 = 135;
+    const JAX_BRONZE: u64 = 118;
+    const JAX_IRON: u64 = 116;
+    const JAX_LEATHER: u64 = 159;
+
+    // === STRUCTURES ===
+    public struct Weapon has key, store {
+        id: UID,
+        weapon_type: u64,
+        category: u8,
+        name: vector<u8>,
+        weight: u64, 
+        damage: u64,
+        durability: u64,
+        material_type: u64,
+        created_at: u64,
+    }
+
+    public struct WeaponRegistry has key {
+        id: UID,
+        weapons: Table<u64, Weapon>,
+    }
+
+    // === EVENTS ===
+    public struct WeaponCrafted has copy, drop {
+        crafter: address,
+        weapon_type: u64,
+        timestamp: u64,
+    }
+
+    // === INITIALIZATION ===
+    public fun create_weapon_registry(ctx: &mut TxContext): WeaponRegistry {
+        WeaponRegistry {
+            id: object::new(ctx),
+            weapons: table::new(ctx),
+        }
+    }
+
+    // === CRAFTING FUNCTIONS ===
+    public fun craft_weapon(
+        registry: &mut WeaponRegistry,
+        weapon_type: u64,
+        crafter: address,
+        inventory: &mut Inventory,
+        clock: &sui::clock::Clock,
+        ctx: &mut TxContext
+    ) {
+        let (weight, damage, durability, material_type) = get_weapon_specifications(weapon_type);
+        let cost = calculate_weapon_cost(weight, material_type);
+        
+        let material_id = get_weapon_material_id(material_type);
+        consume_jax(inventory, material_id, cost, clock);
+        
+        let weapon = Weapon {
+            id: object::new(ctx),
+            weapon_type,
+            category: get_weapon_category(weapon_type),
+            name: get_weapon_name(weapon_type),
+            weight,
+            damage,
+            durability,
+            material_type,
+            created_at: 0, 
+        };
+        
+        table::add(&mut registry.weapons, weapon_type, weapon);
+        
+        event::emit(WeaponCrafted {
+            crafter,
+            weapon_type,
+            timestamp: 0,
+        });
+    }
+
+    // === HELPER FUNCTIONS ===
+    fun get_weapon_category(weapon_type: u64): u8 {
+        if (weapon_type >= 101 && weapon_type <= 108) return CATEGORY_RANGED;
+        if (weapon_type >= 201 && weapon_type <= 212) return CATEGORY_MELEE;
+        if (weapon_type >= 301 && weapon_type <= 305) return CATEGORY_MELEE; 
+        if (weapon_type >= 401 && weapon_type <= 405) return CATEGORY_ARMOR;
+        0 
+    }
+
+    fun get_weapon_name(weapon_type: u64): vector<u8> {
+        if (weapon_type == WEAPON_BOW_SHORT) return b"Arco corto";
+        if (weapon_type == WEAPON_BOW_LONG) return b"Arco largo";
+        b"Arma" 
+    }
+
+    fun get_weapon_specifications(weapon_type: u64): (u64, u64, u64, u64) {
+        if (weapon_type == WEAPON_BOW_SHORT) return (500, 25, 150, JAX_WOOD);
+        (2000, 0, 200, JAX_WOOD) 
+    }
+
+    fun get_weapon_material_id(material_type: u64): u64 {
+        material_type
+    }
+
+    fun calculate_weapon_cost(weight: u64, material_type: u64): u64 {
+        let base_cost = weight / 100;
+        let mut material_multiplier = 1;
+        if (material_type == JAX_BRONZE) material_multiplier = 3;
+        if (material_type == JAX_IRON) material_multiplier = 4;
+        if (material_type == JAX_LEATHER) material_multiplier = 2;
+        
+        base_cost * material_multiplier
+    }
+
+    public fun get_weapon_type(weapon: &Weapon): u64 {
+        weapon.weapon_type
+    }
+    #[test_only]
+    public fun destroy_weapon_for_testing(w: Weapon) {
+        let Weapon { id, weapon_type: _, category: _, name: _, weight: _, damage: _, durability: _, material_type: _, created_at: _ } = w;
+        sui::object::delete(id);
+    }
+}

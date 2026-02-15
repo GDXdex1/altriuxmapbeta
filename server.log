@@ -1,0 +1,737 @@
+
+> mini-app@0.1.0 dev
+> next dev
+
+ ⚠ Port 3000 is in use, using available port 3002 instead.
+   ▲ Next.js 15.3.8
+   - Local:        http://localhost:3002
+   - Network:      http://192.168.0.103:3002
+
+ ✓ Starting...
+ ✓ Ready in 2.1s
+ ○ Compiling /middleware ...
+ ✓ Compiled /middleware in 638ms (153 modules)
+ ○ Compiling /api/logger ...
+ ✓ Compiled /api/logger in 1701ms (537 modules)
+{"level":"info","request":{"cookies":{},"headers":{"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","host":"localhost:3002","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"document","sec-fetch-mode":"navigate","sec-fetch-site":"none","sec-fetch-user":"?1","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/","referrerPolicy":"","url":"http://localhost:3002/"},"requestId":"c861c93f-145f-49e8-975b-865894202835","timestamp":"2026-02-13 19:05:51"}
+ POST /api/logger 200 in 2234ms
+ ○ Compiling / ...
+ ⚠ ./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Sprite' is not exported from '@pixi/react' (imported as 'Sprite').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Sprite' is not exported from '@pixi/react' (imported as 'Sprite').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Stage' is not exported from '@pixi/react' (imported as 'Stage').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Container' is not exported from '@pixi/react' (imported as 'Container').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Sprite' is not exported from '@pixi/react' (imported as 'Sprite').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Sprite' is not exported from '@pixi/react' (imported as 'Sprite').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Stage' is not exported from '@pixi/react' (imported as 'Stage').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Container' is not exported from '@pixi/react' (imported as 'Container').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+{"level":"info","request":{"cookies":{},"headers":{"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","host":"localhost:3002","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"document","sec-fetch-mode":"navigate","sec-fetch-site":"none","sec-fetch-user":"?1","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/","referrerPolicy":"","url":"http://localhost:3002/"},"requestId":"6e44d519-b310-469b-ab4f-1a31f138444d","timestamp":"2026-02-13 19:06:54"}
+ POST /api/logger 200 in 41893ms
+Error: Route "/" used `cookies().get('x-request-id')`. `cookies()` should be awaited before using its value. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at RootLayout (src/app/layout.tsx:26:30)
+  24 |   children: React.ReactNode;
+  25 | }>) {
+> 26 |   const requestId = cookies().get("x-request-id")?.value;
+     |                              ^
+  27 |
+  28 |   return (
+  29 |     <html lang="en">
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+Error: Route "/" used `cookies().get('x-request-id')`. `cookies()` should be awaited before using its value. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at RootLayout (src/app/layout.tsx:26:30)
+  24 |   children: React.ReactNode;
+  25 | }>) {
+> 26 |   const requestId = cookies().get("x-request-id")?.value;
+     |                              ^
+  27 |
+  28 |   return (
+  29 |     <html lang="en">
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 71974ms
+ GET / 200 in 8288ms
+{"level":"info","request":{"cookies":{},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","host":"localhost:3002","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"manifest","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/manifest.json","referrerPolicy":"","url":"http://localhost:3002/manifest.json"},"requestId":"a97c64b9-2a72-4dc1-b184-400bf994ade9","timestamp":"2026-02-13 19:07:37"}
+ POST /api/logger 200 in 72ms
+{"level":"info","request":{"cookies":{},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","host":"localhost:3002","if-modified-since":"Mon, 09 Feb 2026 15:26:33 GMT","if-none-match":"W/\"26a-19c4302f70d\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"manifest","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/manifest.json","referrerPolicy":"","url":"http://localhost:3002/manifest.json"},"requestId":"79e25308-c867-427e-b702-562739f41d20","timestamp":"2026-02-13 19:07:37"}
+ POST /api/logger 200 in 16ms
+{"level":"info","response":{"pathname":"/","requestId":"6e44d519-b310-469b-ab4f-1a31f138444d","status":200,"timestamp":"2026-02-13T23:07:37.511Z","url":"http://localhost:3002/"},"timestamp":"2026-02-13 19:07:37"}
+ POST /api/logger 200 in 260ms
+{"level":"info","response":{"pathname":"/","requestId":"c861c93f-145f-49e8-975b-865894202835","status":200,"timestamp":"2026-02-13T23:07:38.146Z","url":"http://localhost:3002/"},"timestamp":"2026-02-13 19:07:38"}
+ POST /api/logger 200 in 29ms
+{"level":"info","request":{"cookies":{"x-request-id":"6e44d519-b310-469b-ab4f-1a31f138444d"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"x-request-id=6e44d519-b310-469b-ab4f-1a31f138444d","host":"localhost:3002","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"c47c7b91-0ad4-4083-bf6c-083cbe8846d2","timestamp":"2026-02-13 19:07:48"}
+ POST /api/logger 200 in 9ms
+{"level":"info","request":{"cookies":{"x-request-id":"c47c7b91-0ad4-4083-bf6c-083cbe8846d2"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"x-request-id=c47c7b91-0ad4-4083-bf6c-083cbe8846d2","host":"localhost:3002","if-modified-since":"Wed, 28 Jan 2026 02:09:03 GMT","if-none-match":"W/\"411-19c025c8218\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"fa716326-37e7-4341-a600-d84c43a89b5d","timestamp":"2026-02-13 19:07:52"}
+ POST /api/logger 200 in 29ms
+{"level":"info","request":{"cookies":{"x-request-id":"c47c7b91-0ad4-4083-bf6c-083cbe8846d2"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"x-request-id=c47c7b91-0ad4-4083-bf6c-083cbe8846d2","host":"localhost:3002","if-modified-since":"Wed, 28 Jan 2026 02:09:03 GMT","if-none-match":"W/\"411-19c025c8218\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"f7d5df14-58e4-4374-8b74-9395793d91dc","timestamp":"2026-02-13 19:07:52"}
+ POST /api/logger 200 in 10ms
+{"level":"info","request":{"cookies":{"x-request-id":"f7d5df14-58e4-4374-8b74-9395793d91dc"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"x-request-id=f7d5df14-58e4-4374-8b74-9395793d91dc","host":"localhost:3002","if-modified-since":"Wed, 28 Jan 2026 02:09:03 GMT","if-none-match":"W/\"411-19c025c8218\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"cb151c3a-a872-433a-9028-052d836598ea","timestamp":"2026-02-13 19:07:58"}
+ POST /api/logger 200 in 8ms
+ ⚠ ./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Sprite' is not exported from '@pixi/react' (imported as 'Sprite').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Sprite' is not exported from '@pixi/react' (imported as 'Sprite').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Stage' is not exported from '@pixi/react' (imported as 'Stage').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Container' is not exported from '@pixi/react' (imported as 'Container').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Sprite' is not exported from '@pixi/react' (imported as 'Sprite').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Sprite' is not exported from '@pixi/react' (imported as 'Sprite').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Stage' is not exported from '@pixi/react' (imported as 'Stage').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Container' is not exported from '@pixi/react' (imported as 'Container').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+ ⚠ ./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Sprite' is not exported from '@pixi/react' (imported as 'Sprite').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Sprite' is not exported from '@pixi/react' (imported as 'Sprite').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Stage' is not exported from '@pixi/react' (imported as 'Stage').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Container' is not exported from '@pixi/react' (imported as 'Container').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Sprite' is not exported from '@pixi/react' (imported as 'Sprite').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Sprite' is not exported from '@pixi/react' (imported as 'Sprite').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Stage' is not exported from '@pixi/react' (imported as 'Stage').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Container' is not exported from '@pixi/react' (imported as 'Container').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ ./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Sprite' is not exported from '@pixi/react' (imported as 'Sprite').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Sprite' is not exported from '@pixi/react' (imported as 'Sprite').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Stage' is not exported from '@pixi/react' (imported as 'Stage').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Container' is not exported from '@pixi/react' (imported as 'Container').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Sprite' is not exported from '@pixi/react' (imported as 'Sprite').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Sprite' is not exported from '@pixi/react' (imported as 'Sprite').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Stage' is not exported from '@pixi/react' (imported as 'Stage').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Container' is not exported from '@pixi/react' (imported as 'Container').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"8d9d9e2d17254064e7c569d19ca9c8f2908b9d11d5f7e8ac"},"headers":{"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","cache-control":"max-age=0","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=8d9d9e2d17254064e7c569d19ca9c8f2908b9d11d5f7e8ac","host":"localhost:3002","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"document","sec-fetch-mode":"navigate","sec-fetch-site":"same-origin","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/","referrerPolicy":"","url":"http://localhost:3002/"},"requestId":"acb9f504-90ea-41a2-b1cd-08060c345c56","timestamp":"2026-02-13 19:10:03"}
+ POST /api/logger 200 in 1135ms
+Error: Route "/" used `cookies().get('x-request-id')`. `cookies()` should be awaited before using its value. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at RootLayout (src/app/layout.tsx:26:30)
+  24 |   children: React.ReactNode;
+  25 | }>) {
+> 26 |   const requestId = cookies().get("x-request-id")?.value;
+     |                              ^
+  27 |
+  28 |   return (
+  29 |     <html lang="en">
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 1188ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"8d9d9e2d17254064e7c569d19ca9c8f2908b9d11d5f7e8ac"},"headers":{"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","cache-control":"max-age=0","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=8d9d9e2d17254064e7c569d19ca9c8f2908b9d11d5f7e8ac","host":"localhost:3002","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"document","sec-fetch-mode":"navigate","sec-fetch-site":"same-origin","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/","referrerPolicy":"","url":"http://localhost:3002/"},"requestId":"9cad7f8a-e3f3-48e4-bc18-f1f386bfb85c","timestamp":"2026-02-13 19:10:04"}
+ POST /api/logger 200 in 8ms
+Error: Route "/" used `cookies().get('x-request-id')`. `cookies()` should be awaited before using its value. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at RootLayout (src/app/layout.tsx:26:30)
+  24 |   children: React.ReactNode;
+  25 | }>) {
+> 26 |   const requestId = cookies().get("x-request-id")?.value;
+     |                              ^
+  27 |
+  28 |   return (
+  29 |     <html lang="en">
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 72ms
+{"level":"info","request":{"cookies":{},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","host":"localhost:3002","if-modified-since":"Mon, 09 Feb 2026 15:26:33 GMT","if-none-match":"W/\"26a-19c4302f70d\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"manifest","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/manifest.json","referrerPolicy":"","url":"http://localhost:3002/manifest.json"},"requestId":"1fe669c5-3358-43a5-8f8d-527f01182502","timestamp":"2026-02-13 19:10:14"}
+ POST /api/logger 200 in 26ms
+{"level":"info","response":{"pathname":"/","requestId":"acb9f504-90ea-41a2-b1cd-08060c345c56","status":200,"timestamp":"2026-02-13T23:10:25.931Z","url":"http://localhost:3002/"},"timestamp":"2026-02-13 19:10:26"}
+ POST /api/logger 200 in 563ms
+{"level":"info","response":{"pathname":"/","requestId":"9cad7f8a-e3f3-48e4-bc18-f1f386bfb85c","status":200,"timestamp":"2026-02-13T23:10:26.276Z","url":"http://localhost:3002/"},"timestamp":"2026-02-13 19:10:27"}
+ POST /api/logger 200 in 118ms
+{"level":"info","request":{"cookies":{},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","host":"localhost:3002","if-modified-since":"Mon, 09 Feb 2026 15:26:33 GMT","if-none-match":"W/\"26a-19c4302f70d\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"manifest","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/manifest.json","referrerPolicy":"","url":"http://localhost:3002/manifest.json"},"requestId":"b8940a36-28a5-4026-bd71-32c37cabdf5b","timestamp":"2026-02-13 19:10:27"}
+ POST /api/logger 200 in 34ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"8d9d9e2d17254064e7c569d19ca9c8f2908b9d11d5f7e8ac","x-request-id":"9cad7f8a-e3f3-48e4-bc18-f1f386bfb85c"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=8d9d9e2d17254064e7c569d19ca9c8f2908b9d11d5f7e8ac; x-request-id=9cad7f8a-e3f3-48e4-bc18-f1f386bfb85c","host":"localhost:3002","if-modified-since":"Wed, 28 Jan 2026 02:09:03 GMT","if-none-match":"W/\"411-19c025c8218\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"f03ef417-aab5-421c-b546-388adefcbc33","timestamp":"2026-02-13 19:10:32"}
+ POST /api/logger 200 in 16ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"8d9d9e2d17254064e7c569d19ca9c8f2908b9d11d5f7e8ac","x-request-id":"f03ef417-aab5-421c-b546-388adefcbc33"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=8d9d9e2d17254064e7c569d19ca9c8f2908b9d11d5f7e8ac; x-request-id=f03ef417-aab5-421c-b546-388adefcbc33","host":"localhost:3002","if-modified-since":"Wed, 28 Jan 2026 02:09:03 GMT","if-none-match":"W/\"411-19c025c8218\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"fce969fc-687d-4753-9c95-1a9d0f37aae9","timestamp":"2026-02-13 19:10:37"}
+ POST /api/logger 200 in 16ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"8d9d9e2d17254064e7c569d19ca9c8f2908b9d11d5f7e8ac","x-request-id":"f03ef417-aab5-421c-b546-388adefcbc33"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=8d9d9e2d17254064e7c569d19ca9c8f2908b9d11d5f7e8ac; x-request-id=f03ef417-aab5-421c-b546-388adefcbc33","host":"localhost:3002","if-modified-since":"Wed, 28 Jan 2026 02:09:03 GMT","if-none-match":"W/\"411-19c025c8218\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"f8865429-8f19-4297-b64e-4bf1805149e9","timestamp":"2026-02-13 19:10:37"}
+ POST /api/logger 200 in 20ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"8d9d9e2d17254064e7c569d19ca9c8f2908b9d11d5f7e8ac","x-request-id":"f03ef417-aab5-421c-b546-388adefcbc33"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=8d9d9e2d17254064e7c569d19ca9c8f2908b9d11d5f7e8ac; x-request-id=f03ef417-aab5-421c-b546-388adefcbc33","host":"localhost:3002","if-modified-since":"Wed, 28 Jan 2026 02:09:03 GMT","if-none-match":"W/\"411-19c025c8218\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"38a020d3-12d9-409d-b6d3-dbe0cb908551","timestamp":"2026-02-13 19:10:37"}
+ POST /api/logger 200 in 7ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"8d9d9e2d17254064e7c569d19ca9c8f2908b9d11d5f7e8ac","x-request-id":"38a020d3-12d9-409d-b6d3-dbe0cb908551"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=8d9d9e2d17254064e7c569d19ca9c8f2908b9d11d5f7e8ac; x-request-id=38a020d3-12d9-409d-b6d3-dbe0cb908551","host":"localhost:3002","if-modified-since":"Wed, 28 Jan 2026 02:09:03 GMT","if-none-match":"W/\"411-19c025c8218\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"477556d6-c058-4cc9-b88f-6d9d9735af5c","timestamp":"2026-02-13 19:10:37"}
+ POST /api/logger 200 in 6ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"8d9d9e2d17254064e7c569d19ca9c8f2908b9d11d5f7e8ac","x-request-id":"477556d6-c058-4cc9-b88f-6d9d9735af5c"},"headers":{"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=8d9d9e2d17254064e7c569d19ca9c8f2908b9d11d5f7e8ac; x-request-id=477556d6-c058-4cc9-b88f-6d9d9735af5c","host":"localhost:3002","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"document","sec-fetch-mode":"navigate","sec-fetch-site":"none","sec-fetch-user":"?1","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/","referrerPolicy":"","url":"http://localhost:3002/"},"requestId":"44fab981-687d-44fc-aaab-9e1c08fba550","timestamp":"2026-02-13 19:10:54"}
+ POST /api/logger 200 in 14ms
+Error: Route "/" used `cookies().get('x-request-id')`. `cookies()` should be awaited before using its value. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at RootLayout (src/app/layout.tsx:26:30)
+  24 |   children: React.ReactNode;
+  25 | }>) {
+> 26 |   const requestId = cookies().get("x-request-id")?.value;
+     |                              ^
+  27 |
+  28 |   return (
+  29 |     <html lang="en">
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 66ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"8d9d9e2d17254064e7c569d19ca9c8f2908b9d11d5f7e8ac","x-request-id":"477556d6-c058-4cc9-b88f-6d9d9735af5c"},"headers":{"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=8d9d9e2d17254064e7c569d19ca9c8f2908b9d11d5f7e8ac; x-request-id=477556d6-c058-4cc9-b88f-6d9d9735af5c","host":"localhost:3002","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"document","sec-fetch-mode":"navigate","sec-fetch-site":"none","sec-fetch-user":"?1","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/","referrerPolicy":"","url":"http://localhost:3002/"},"requestId":"90f2b5d4-b309-4299-87d7-e49c0ce76d93","timestamp":"2026-02-13 19:10:54"}
+ POST /api/logger 200 in 6ms
+Error: Route "/" used `cookies().get('x-request-id')`. `cookies()` should be awaited before using its value. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at RootLayout (src/app/layout.tsx:26:30)
+  24 |   children: React.ReactNode;
+  25 | }>) {
+> 26 |   const requestId = cookies().get("x-request-id")?.value;
+     |                              ^
+  27 |
+  28 |   return (
+  29 |     <html lang="en">
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 72ms
+{"level":"info","request":{"cookies":{},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","host":"localhost:3002","if-modified-since":"Mon, 09 Feb 2026 15:26:33 GMT","if-none-match":"W/\"26a-19c4302f70d\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"manifest","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/manifest.json","referrerPolicy":"","url":"http://localhost:3002/manifest.json"},"requestId":"6c1c09c8-d2e1-4cc6-965b-f659e2a5670d","timestamp":"2026-02-13 19:11:00"}
+ POST /api/logger 200 in 12ms
+{"level":"info","response":{"pathname":"/","requestId":"90f2b5d4-b309-4299-87d7-e49c0ce76d93","status":200,"timestamp":"2026-02-13T23:11:19.404Z","url":"http://localhost:3002/"},"timestamp":"2026-02-13 19:11:19"}
+ POST /api/logger 200 in 28ms
+{"level":"info","request":{"cookies":{},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","host":"localhost:3002","if-modified-since":"Mon, 09 Feb 2026 15:26:33 GMT","if-none-match":"W/\"26a-19c4302f70d\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"manifest","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/manifest.json","referrerPolicy":"","url":"http://localhost:3002/manifest.json"},"requestId":"4aeffd3e-03dc-4d5a-aca9-54282f94bb77","timestamp":"2026-02-13 19:11:22"}
+ POST /api/logger 200 in 410ms
+{"level":"info","response":{"pathname":"/","requestId":"44fab981-687d-44fc-aaab-9e1c08fba550","status":200,"timestamp":"2026-02-13T23:11:22.613Z","url":"http://localhost:3002/"},"timestamp":"2026-02-13 19:11:24"}
+ POST /api/logger 200 in 115ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"8d9d9e2d17254064e7c569d19ca9c8f2908b9d11d5f7e8ac","x-request-id":"90f2b5d4-b309-4299-87d7-e49c0ce76d93"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=8d9d9e2d17254064e7c569d19ca9c8f2908b9d11d5f7e8ac; x-request-id=90f2b5d4-b309-4299-87d7-e49c0ce76d93","host":"localhost:3002","if-modified-since":"Wed, 28 Jan 2026 02:09:03 GMT","if-none-match":"W/\"411-19c025c8218\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"699dd0bc-6570-472e-bd99-6ba0c7a92595","timestamp":"2026-02-13 19:11:33"}
+ POST /api/logger 200 in 2803ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"8d9d9e2d17254064e7c569d19ca9c8f2908b9d11d5f7e8ac","x-request-id":"90f2b5d4-b309-4299-87d7-e49c0ce76d93"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=8d9d9e2d17254064e7c569d19ca9c8f2908b9d11d5f7e8ac; x-request-id=90f2b5d4-b309-4299-87d7-e49c0ce76d93","host":"localhost:3002","if-modified-since":"Wed, 28 Jan 2026 02:09:03 GMT","if-none-match":"W/\"411-19c025c8218\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"3e607b50-5686-4d53-9883-4b822cbce922","timestamp":"2026-02-13 19:12:01"}
+ POST /api/logger 200 in 6892ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"8d9d9e2d17254064e7c569d19ca9c8f2908b9d11d5f7e8ac","x-request-id":"699dd0bc-6570-472e-bd99-6ba0c7a92595"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=8d9d9e2d17254064e7c569d19ca9c8f2908b9d11d5f7e8ac; x-request-id=699dd0bc-6570-472e-bd99-6ba0c7a92595","host":"localhost:3002","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"d0ce58b6-8bd3-4c87-a964-57d139ad3547","timestamp":"2026-02-13 19:12:06"}
+ POST /api/logger 200 in 4491ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"8d9d9e2d17254064e7c569d19ca9c8f2908b9d11d5f7e8ac","x-request-id":"699dd0bc-6570-472e-bd99-6ba0c7a92595"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=8d9d9e2d17254064e7c569d19ca9c8f2908b9d11d5f7e8ac; x-request-id=699dd0bc-6570-472e-bd99-6ba0c7a92595","host":"localhost:3002","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"8b34991d-8be4-49ec-a434-4f28b546e7a6","timestamp":"2026-02-13 19:12:06"}
+ POST /api/logger 200 in 4696ms
+ ⚠ ./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Sprite' is not exported from '@pixi/react' (imported as 'Sprite').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Sprite' is not exported from '@pixi/react' (imported as 'Sprite').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Stage' is not exported from '@pixi/react' (imported as 'Stage').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Container' is not exported from '@pixi/react' (imported as 'Container').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Sprite' is not exported from '@pixi/react' (imported as 'Sprite').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Sprite' is not exported from '@pixi/react' (imported as 'Sprite').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Stage' is not exported from '@pixi/react' (imported as 'Stage').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Container' is not exported from '@pixi/react' (imported as 'Container').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ ./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Sprite' is not exported from '@pixi/react' (imported as 'Sprite').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Sprite' is not exported from '@pixi/react' (imported as 'Sprite').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Stage' is not exported from '@pixi/react' (imported as 'Stage').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Container' is not exported from '@pixi/react' (imported as 'Container').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Sprite' is not exported from '@pixi/react' (imported as 'Sprite').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Sprite' is not exported from '@pixi/react' (imported as 'Sprite').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Stage' is not exported from '@pixi/react' (imported as 'Stage').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+
+./src/components/hexmap/HexMapCanvas.tsx
+Attempted import error: 'Container' is not exported from '@pixi/react' (imported as 'Container').
+
+Import trace for requested module:
+./src/components/hexmap/HexMapCanvas.tsx
+./src/app/page.tsx
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"b432f6316331a5dfa54d092e0e1672c8908b9d11d5f7e8ac"},"headers":{"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","cache-control":"max-age=0","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=b432f6316331a5dfa54d092e0e1672c8908b9d11d5f7e8ac","host":"localhost:3002","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"document","sec-fetch-mode":"navigate","sec-fetch-site":"same-origin","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/","referrerPolicy":"","url":"http://localhost:3002/"},"requestId":"befc9f1c-76e6-420b-9a9b-80237e53cf62","timestamp":"2026-02-13 19:14:42"}
+ POST /api/logger 200 in 7609ms
+Error: Route "/" used `cookies().get('x-request-id')`. `cookies()` should be awaited before using its value. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at RootLayout (src/app/layout.tsx:26:30)
+  24 |   children: React.ReactNode;
+  25 | }>) {
+> 26 |   const requestId = cookies().get("x-request-id")?.value;
+     |                              ^
+  27 |
+  28 |   return (
+  29 |     <html lang="en">
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 3776ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"b432f6316331a5dfa54d092e0e1672c8908b9d11d5f7e8ac"},"headers":{"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","cache-control":"max-age=0","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=b432f6316331a5dfa54d092e0e1672c8908b9d11d5f7e8ac","host":"localhost:3002","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"document","sec-fetch-mode":"navigate","sec-fetch-site":"same-origin","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/","referrerPolicy":"","url":"http://localhost:3002/"},"requestId":"02c3b524-6cf1-4907-8010-7fc6267e7a11","timestamp":"2026-02-13 19:14:46"}
+ POST /api/logger 200 in 6ms
+Error: Route "/" used `cookies().get('x-request-id')`. `cookies()` should be awaited before using its value. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at RootLayout (src/app/layout.tsx:26:30)
+  24 |   children: React.ReactNode;
+  25 | }>) {
+> 26 |   const requestId = cookies().get("x-request-id")?.value;
+     |                              ^
+  27 |
+  28 |   return (
+  29 |     <html lang="en">
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 106ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"b432f6316331a5dfa54d092e0e1672c8908b9d11d5f7e8ac"},"headers":{"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","cache-control":"max-age=0","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=b432f6316331a5dfa54d092e0e1672c8908b9d11d5f7e8ac","host":"localhost:3002","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"document","sec-fetch-mode":"navigate","sec-fetch-site":"same-origin","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/","referrerPolicy":"","url":"http://localhost:3002/"},"requestId":"ebc7a420-4ed1-43cb-9a99-a9a41ffb0053","timestamp":"2026-02-13 19:14:46"}
+ POST /api/logger 200 in 6ms
+Error: Route "/" used `cookies().get('x-request-id')`. `cookies()` should be awaited before using its value. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at RootLayout (src/app/layout.tsx:26:30)
+  24 |   children: React.ReactNode;
+  25 | }>) {
+> 26 |   const requestId = cookies().get("x-request-id")?.value;
+     |                              ^
+  27 |
+  28 |   return (
+  29 |     <html lang="en">
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 62ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled /api/logger in 59.2s (2984 modules)
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"7418cc3072a33a56eb25eeb99c6e2f1e908b9d11d5f7e8ac"},"headers":{"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","cache-control":"max-age=0","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=7418cc3072a33a56eb25eeb99c6e2f1e908b9d11d5f7e8ac","host":"localhost:3002","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"document","sec-fetch-mode":"navigate","sec-fetch-site":"same-origin","sec-fetch-user":"?1","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/","referrerPolicy":"","url":"http://localhost:3002/"},"requestId":"1abf5fff-df4b-4fee-bf7d-93cfb4ab4a54","timestamp":"2026-02-13 19:20:18"}
+ POST /api/logger 200 in 18631ms
+Error: Route "/" used `cookies().get('x-request-id')`. `cookies()` should be awaited before using its value. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at RootLayout (src/app/layout.tsx:26:30)
+  24 |   children: React.ReactNode;
+  25 | }>) {
+> 26 |   const requestId = cookies().get("x-request-id")?.value;
+     |                              ^
+  27 |
+  28 |   return (
+  29 |     <html lang="en">
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 1137ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"7418cc3072a33a56eb25eeb99c6e2f1e908b9d11d5f7e8ac"},"headers":{"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","cache-control":"max-age=0","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=7418cc3072a33a56eb25eeb99c6e2f1e908b9d11d5f7e8ac","host":"localhost:3002","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"document","sec-fetch-mode":"navigate","sec-fetch-site":"same-origin","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/","referrerPolicy":"","url":"http://localhost:3002/"},"requestId":"45b5e76d-83ad-4cdb-b95c-80244e7b6c87","timestamp":"2026-02-13 19:20:19"}
+ POST /api/logger 200 in 9ms
+Error: Route "/" used `cookies().get('x-request-id')`. `cookies()` should be awaited before using its value. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at RootLayout (src/app/layout.tsx:26:30)
+  24 |   children: React.ReactNode;
+  25 | }>) {
+> 26 |   const requestId = cookies().get("x-request-id")?.value;
+     |                              ^
+  27 |
+  28 |   return (
+  29 |     <html lang="en">
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 63ms
+{"level":"info","request":{"cookies":{},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","host":"localhost:3002","if-modified-since":"Mon, 09 Feb 2026 15:26:33 GMT","if-none-match":"W/\"26a-19c4302f70d\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"manifest","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/manifest.json","referrerPolicy":"","url":"http://localhost:3002/manifest.json"},"requestId":"cfa8ef53-5783-466f-aede-4076cb92c956","timestamp":"2026-02-13 19:20:46"}
+ POST /api/logger 200 in 2985ms
+{"level":"info","request":{"cookies":{},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","host":"localhost:3002","if-modified-since":"Mon, 09 Feb 2026 15:26:33 GMT","if-none-match":"W/\"26a-19c4302f70d\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"manifest","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/manifest.json","referrerPolicy":"","url":"http://localhost:3002/manifest.json"},"requestId":"098f6839-a1ee-4221-a17b-7f0b16de1ab4","timestamp":"2026-02-13 19:20:51"}
+ POST /api/logger 200 in 147ms
+{"level":"info","response":{"pathname":"/","requestId":"1abf5fff-df4b-4fee-bf7d-93cfb4ab4a54","status":200,"timestamp":"2026-02-13T23:21:04.692Z","url":"http://localhost:3002/"},"timestamp":"2026-02-13 19:21:06"}
+ POST /api/logger 200 in 1372ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"c6c6e4ee258180cafb07f10ae036b2f0908b9d11d5f7e8ac","x-request-id":"45b5e76d-83ad-4cdb-b95c-80244e7b6c87"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=c6c6e4ee258180cafb07f10ae036b2f0908b9d11d5f7e8ac; x-request-id=45b5e76d-83ad-4cdb-b95c-80244e7b6c87","host":"localhost:3002","if-modified-since":"Wed, 28 Jan 2026 02:09:03 GMT","if-none-match":"W/\"411-19c025c8218\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"28f7bfc7-40b1-464f-8e21-cf2cd1461a88","timestamp":"2026-02-13 19:21:13"}
+ POST /api/logger 200 in 19ms
+{"level":"info","response":{"pathname":"/","requestId":"45b5e76d-83ad-4cdb-b95c-80244e7b6c87","status":200,"timestamp":"2026-02-13T23:21:31.603Z","url":"http://localhost:3002/"},"timestamp":"2026-02-13 19:22:46"}
+ POST /api/logger 200 in 1351ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"c6c6e4ee258180cafb07f10ae036b2f0908b9d11d5f7e8ac","x-request-id":"28f7bfc7-40b1-464f-8e21-cf2cd1461a88"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=c6c6e4ee258180cafb07f10ae036b2f0908b9d11d5f7e8ac; x-request-id=28f7bfc7-40b1-464f-8e21-cf2cd1461a88","host":"localhost:3002","if-modified-since":"Wed, 28 Jan 2026 02:09:03 GMT","if-none-match":"W/\"411-19c025c8218\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"9e7523e4-cc5d-4411-a41e-48c829218e4f","timestamp":"2026-02-13 19:22:46"}
+ POST /api/logger 200 in 409ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"c6c6e4ee258180cafb07f10ae036b2f0908b9d11d5f7e8ac","x-request-id":"9e7523e4-cc5d-4411-a41e-48c829218e4f"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=c6c6e4ee258180cafb07f10ae036b2f0908b9d11d5f7e8ac; x-request-id=9e7523e4-cc5d-4411-a41e-48c829218e4f","host":"localhost:3002","if-modified-since":"Wed, 28 Jan 2026 02:09:03 GMT","if-none-match":"W/\"411-19c025c8218\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"f474f906-7bee-43f7-8e8f-fffe4656cb7b","timestamp":"2026-02-13 19:22:50"}
+ POST /api/logger 200 in 25ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"c6c6e4ee258180cafb07f10ae036b2f0908b9d11d5f7e8ac","x-request-id":"9e7523e4-cc5d-4411-a41e-48c829218e4f"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=c6c6e4ee258180cafb07f10ae036b2f0908b9d11d5f7e8ac; x-request-id=9e7523e4-cc5d-4411-a41e-48c829218e4f","host":"localhost:3002","if-modified-since":"Wed, 28 Jan 2026 02:09:03 GMT","if-none-match":"W/\"411-19c025c8218\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"3fb62295-4c7a-4097-becc-c7a90badc987","timestamp":"2026-02-13 19:22:50"}
+ POST /api/logger 200 in 9ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"c6c6e4ee258180cafb07f10ae036b2f0908b9d11d5f7e8ac","x-request-id":"3fb62295-4c7a-4097-becc-c7a90badc987"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=c6c6e4ee258180cafb07f10ae036b2f0908b9d11d5f7e8ac; x-request-id=3fb62295-4c7a-4097-becc-c7a90badc987","host":"localhost:3002","if-modified-since":"Wed, 28 Jan 2026 02:09:03 GMT","if-none-match":"W/\"411-19c025c8218\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"fb6c9a15-e3c2-4716-a05a-4b6b50cb28c0","timestamp":"2026-02-13 19:22:56"}
+ POST /api/logger 200 in 11ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"c6c6e4ee258180cafb07f10ae036b2f0908b9d11d5f7e8ac","x-request-id":"fb6c9a15-e3c2-4716-a05a-4b6b50cb28c0"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=c6c6e4ee258180cafb07f10ae036b2f0908b9d11d5f7e8ac; x-request-id=fb6c9a15-e3c2-4716-a05a-4b6b50cb28c0","host":"localhost:3002","if-modified-since":"Wed, 28 Jan 2026 02:09:03 GMT","if-none-match":"W/\"411-19c025c8218\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"8efc4b77-c75e-48d5-bdde-00c5554b01a7","timestamp":"2026-02-13 19:23:04"}
+ POST /api/logger 200 in 13ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"c6c6e4ee258180cafb07f10ae036b2f0908b9d11d5f7e8ac","x-request-id":"8efc4b77-c75e-48d5-bdde-00c5554b01a7"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=c6c6e4ee258180cafb07f10ae036b2f0908b9d11d5f7e8ac; x-request-id=8efc4b77-c75e-48d5-bdde-00c5554b01a7","host":"localhost:3002","if-modified-since":"Wed, 28 Jan 2026 02:09:03 GMT","if-none-match":"W/\"411-19c025c8218\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"7db502d2-496a-4cdc-99cd-6df47a54a677","timestamp":"2026-02-13 19:23:07"}
+ POST /api/logger 200 in 8ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"c6c6e4ee258180cafb07f10ae036b2f0908b9d11d5f7e8ac","x-request-id":"8efc4b77-c75e-48d5-bdde-00c5554b01a7"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=c6c6e4ee258180cafb07f10ae036b2f0908b9d11d5f7e8ac; x-request-id=8efc4b77-c75e-48d5-bdde-00c5554b01a7","host":"localhost:3002","if-modified-since":"Wed, 28 Jan 2026 02:09:03 GMT","if-none-match":"W/\"411-19c025c8218\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"875d00d2-d8e2-4cf9-a54f-1d09cc707077","timestamp":"2026-02-13 19:23:07"}
+ POST /api/logger 200 in 15ms
+ ○ Compiling /api/logger ...
+ ✓ Compiled /api/logger in 372.1s (2982 modules)
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"c6c6e4ee258180cafb07f10ae036b2f0908b9d11d5f7e8ac"},"headers":{"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=c6c6e4ee258180cafb07f10ae036b2f0908b9d11d5f7e8ac","host":"localhost:3002","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"document","sec-fetch-mode":"navigate","sec-fetch-site":"none","sec-fetch-user":"?1","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/","referrerPolicy":"","url":"http://localhost:3002/"},"requestId":"9a372c6e-50fe-49b9-8bcc-ff44f825a04d","timestamp":"2026-02-13 19:35:57"}
+ POST /api/logger 200 in 23504ms
+Error: Route "/" used `cookies().get('x-request-id')`. `cookies()` should be awaited before using its value. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at RootLayout (src/app/layout.tsx:26:30)
+  24 |   children: React.ReactNode;
+  25 | }>) {
+> 26 |   const requestId = cookies().get("x-request-id")?.value;
+     |                              ^
+  27 |
+  28 |   return (
+  29 |     <html lang="en">
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 10804ms
+{"level":"info","response":{"pathname":"/","requestId":"9a372c6e-50fe-49b9-8bcc-ff44f825a04d","status":200,"timestamp":"2026-02-13T23:36:19.337Z","url":"http://localhost:3002/"},"timestamp":"2026-02-13 19:36:20"}
+ POST /api/logger 200 in 670ms
+{"level":"info","request":{"cookies":{},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","host":"localhost:3002","if-modified-since":"Mon, 09 Feb 2026 15:26:33 GMT","if-none-match":"W/\"26a-19c4302f70d\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"manifest","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/manifest.json","referrerPolicy":"","url":"http://localhost:3002/manifest.json"},"requestId":"e94a1545-da41-4647-88a0-5424f4f1f079","timestamp":"2026-02-13 19:36:20"}
+ POST /api/logger 200 in 224ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"c6c6e4ee258180cafb07f10ae036b2f0908b9d11d5f7e8ac","x-request-id":"9a372c6e-50fe-49b9-8bcc-ff44f825a04d"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=c6c6e4ee258180cafb07f10ae036b2f0908b9d11d5f7e8ac; x-request-id=9a372c6e-50fe-49b9-8bcc-ff44f825a04d","host":"localhost:3002","if-modified-since":"Wed, 28 Jan 2026 02:09:03 GMT","if-none-match":"W/\"411-19c025c8218\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"65de4240-8231-4625-b3fd-048fb53c36c2","timestamp":"2026-02-13 19:36:22"}
+ POST /api/logger 200 in 22ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"c6c6e4ee258180cafb07f10ae036b2f0908b9d11d5f7e8ac","x-request-id":"65de4240-8231-4625-b3fd-048fb53c36c2"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=c6c6e4ee258180cafb07f10ae036b2f0908b9d11d5f7e8ac; x-request-id=65de4240-8231-4625-b3fd-048fb53c36c2","host":"localhost:3002","if-modified-since":"Wed, 28 Jan 2026 02:09:03 GMT","if-none-match":"W/\"411-19c025c8218\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"4be8f539-903e-4075-9d50-d8c0fb1d2b20","timestamp":"2026-02-13 19:36:25"}
+ POST /api/logger 200 in 207ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"c6c6e4ee258180cafb07f10ae036b2f0908b9d11d5f7e8ac","x-request-id":"4be8f539-903e-4075-9d50-d8c0fb1d2b20"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=c6c6e4ee258180cafb07f10ae036b2f0908b9d11d5f7e8ac; x-request-id=4be8f539-903e-4075-9d50-d8c0fb1d2b20","host":"localhost:3002","if-modified-since":"Wed, 28 Jan 2026 02:09:03 GMT","if-none-match":"W/\"411-19c025c8218\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"21fe515d-3c2d-406f-976b-340d74170b6b","timestamp":"2026-02-13 19:36:25"}
+ POST /api/logger 200 in 7ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"c6c6e4ee258180cafb07f10ae036b2f0908b9d11d5f7e8ac","x-request-id":"4be8f539-903e-4075-9d50-d8c0fb1d2b20"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=c6c6e4ee258180cafb07f10ae036b2f0908b9d11d5f7e8ac; x-request-id=4be8f539-903e-4075-9d50-d8c0fb1d2b20","host":"localhost:3002","if-modified-since":"Wed, 28 Jan 2026 02:09:03 GMT","if-none-match":"W/\"411-19c025c8218\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"d20faf11-b42c-4bb1-9d29-fb3d35e202c2","timestamp":"2026-02-13 19:36:25"}
+ POST /api/logger 200 in 6ms
+ ✓ Compiled in 156.1s (2847 modules)
+ ○ Compiling /api/logger ...
+ ✓ Compiled /api/logger in 4.5s (1630 modules)
+(node:10648) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 uncaughtException listeners added to [process]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"56bcaba0377bc6036df3630e8d373a8c908b9d11d5f7e8ac"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=56bcaba0377bc6036df3630e8d373a8c908b9d11d5f7e8ac","host":"localhost:3002","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/","referrerPolicy":"","url":"http://localhost:3002/"},"requestId":"8166ddbd-e4da-4761-8c6d-4cd14e939f51","timestamp":"2026-02-13 20:36:56"}
+ POST /api/logger 200 in 10246ms
+Error: Route "/" used `cookies().get('x-request-id')`. `cookies()` should be awaited before using its value. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at RootLayout (src/app/layout.tsx:26:30)
+  24 |   children: React.ReactNode;
+  25 | }>) {
+> 26 |   const requestId = cookies().get("x-request-id")?.value;
+     |                              ^
+  27 |
+  28 |   return (
+  29 |     <html lang="en">
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 208ms
+{"level":"info","request":{"cookies":{},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","host":"localhost:3002","if-modified-since":"Mon, 09 Feb 2026 15:26:33 GMT","if-none-match":"W/\"26a-19c4302f70d\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"manifest","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/manifest.json","referrerPolicy":"","url":"http://localhost:3002/manifest.json"},"requestId":"8f0a14e5-0a16-4a41-b275-7ee8f2cbd324","timestamp":"2026-02-13 20:36:57"}
+ POST /api/logger 200 in 10ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"56bcaba0377bc6036df3630e8d373a8c908b9d11d5f7e8ac"},"headers":{"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=56bcaba0377bc6036df3630e8d373a8c908b9d11d5f7e8ac","host":"localhost:3002","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"document","sec-fetch-mode":"navigate","sec-fetch-site":"none","sec-fetch-user":"?1","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/","referrerPolicy":"","url":"http://localhost:3002/"},"requestId":"30a39df9-f009-460d-b929-da30caba21bf","timestamp":"2026-02-13 20:41:29"}
+ POST /api/logger 200 in 12ms
+Error: Route "/" used `cookies().get('x-request-id')`. `cookies()` should be awaited before using its value. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at RootLayout (src/app/layout.tsx:26:30)
+  24 |   children: React.ReactNode;
+  25 | }>) {
+> 26 |   const requestId = cookies().get("x-request-id")?.value;
+     |                              ^
+  27 |
+  28 |   return (
+  29 |     <html lang="en">
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 1787ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"56bcaba0377bc6036df3630e8d373a8c908b9d11d5f7e8ac"},"headers":{"accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=56bcaba0377bc6036df3630e8d373a8c908b9d11d5f7e8ac","host":"localhost:3002","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"document","sec-fetch-mode":"navigate","sec-fetch-site":"none","sec-fetch-user":"?1","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/","referrerPolicy":"","url":"http://localhost:3002/"},"requestId":"cd0aa909-8dd7-417e-bd6a-58c98f09ea67","timestamp":"2026-02-13 20:41:30"}
+ POST /api/logger 200 in 94ms
+Error: Route "/" used `cookies().get('x-request-id')`. `cookies()` should be awaited before using its value. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at RootLayout (src/app/layout.tsx:26:30)
+  24 |   children: React.ReactNode;
+  25 | }>) {
+> 26 |   const requestId = cookies().get("x-request-id")?.value;
+     |                              ^
+  27 |
+  28 |   return (
+  29 |     <html lang="en">
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET / 200 in 59ms
+{"level":"info","request":{"cookies":{},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","host":"localhost:3002","if-modified-since":"Mon, 09 Feb 2026 15:26:33 GMT","if-none-match":"W/\"26a-19c4302f70d\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"manifest","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/manifest.json","referrerPolicy":"","url":"http://localhost:3002/manifest.json"},"requestId":"f65713f7-869e-43c4-b018-62fa33e3d0ea","timestamp":"2026-02-13 20:41:39"}
+ POST /api/logger 200 in 42ms
+{"level":"info","request":{"cookies":{},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","host":"localhost:3002","if-modified-since":"Mon, 09 Feb 2026 15:26:33 GMT","if-none-match":"W/\"26a-19c4302f70d\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"manifest","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/manifest.json","referrerPolicy":"","url":"http://localhost:3002/manifest.json"},"requestId":"7268bf16-df54-466e-8478-1e0203cafc5e","timestamp":"2026-02-13 20:41:39"}
+ POST /api/logger 200 in 11ms
+{"level":"info","response":{"pathname":"/","requestId":"cd0aa909-8dd7-417e-bd6a-58c98f09ea67","status":200,"timestamp":"2026-02-14T00:41:52.040Z","url":"http://localhost:3002/"},"timestamp":"2026-02-13 20:41:52"}
+ POST /api/logger 200 in 45ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"56bcaba0377bc6036df3630e8d373a8c908b9d11d5f7e8ac","x-request-id":"cd0aa909-8dd7-417e-bd6a-58c98f09ea67"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=56bcaba0377bc6036df3630e8d373a8c908b9d11d5f7e8ac; x-request-id=cd0aa909-8dd7-417e-bd6a-58c98f09ea67","host":"localhost:3002","if-modified-since":"Wed, 28 Jan 2026 02:09:03 GMT","if-none-match":"W/\"411-19c025c8218\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"96c716a0-ffe1-484c-a46a-f97c61ce3bad","timestamp":"2026-02-13 20:42:03"}
+ POST /api/logger 200 in 997ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"56bcaba0377bc6036df3630e8d373a8c908b9d11d5f7e8ac","x-request-id":"cd0aa909-8dd7-417e-bd6a-58c98f09ea67"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=56bcaba0377bc6036df3630e8d373a8c908b9d11d5f7e8ac; x-request-id=cd0aa909-8dd7-417e-bd6a-58c98f09ea67","host":"localhost:3002","if-modified-since":"Wed, 28 Jan 2026 02:09:03 GMT","if-none-match":"W/\"411-19c025c8218\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"a1931aae-7326-4939-b213-f7439e49f5f2","timestamp":"2026-02-13 20:42:05"}
+ POST /api/logger 200 in 1025ms
+{"level":"info","response":{"pathname":"/","requestId":"30a39df9-f009-460d-b929-da30caba21bf","status":200,"timestamp":"2026-02-14T00:42:06.633Z","url":"http://localhost:3002/"},"timestamp":"2026-02-13 20:42:07"}
+ POST /api/logger 200 in 165ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"56bcaba0377bc6036df3630e8d373a8c908b9d11d5f7e8ac","x-request-id":"cd0aa909-8dd7-417e-bd6a-58c98f09ea67"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=56bcaba0377bc6036df3630e8d373a8c908b9d11d5f7e8ac; x-request-id=cd0aa909-8dd7-417e-bd6a-58c98f09ea67","host":"localhost:3002","if-modified-since":"Wed, 28 Jan 2026 02:09:03 GMT","if-none-match":"W/\"411-19c025c8218\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"86128815-6a17-455c-ae23-abc8f80629f6","timestamp":"2026-02-13 20:42:07"}
+ POST /api/logger 200 in 9ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"56bcaba0377bc6036df3630e8d373a8c908b9d11d5f7e8ac","x-request-id":"96c716a0-ffe1-484c-a46a-f97c61ce3bad"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=56bcaba0377bc6036df3630e8d373a8c908b9d11d5f7e8ac; x-request-id=96c716a0-ffe1-484c-a46a-f97c61ce3bad","host":"localhost:3002","if-modified-since":"Wed, 28 Jan 2026 02:09:03 GMT","if-none-match":"W/\"411-19c025c8218\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"c670e37b-9033-459b-bbbb-683dead91e46","timestamp":"2026-02-13 20:42:07"}
+ POST /api/logger 200 in 298ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"56bcaba0377bc6036df3630e8d373a8c908b9d11d5f7e8ac","x-request-id":"c670e37b-9033-459b-bbbb-683dead91e46"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=56bcaba0377bc6036df3630e8d373a8c908b9d11d5f7e8ac; x-request-id=c670e37b-9033-459b-bbbb-683dead91e46","host":"localhost:3002","if-modified-since":"Wed, 28 Jan 2026 02:09:03 GMT","if-none-match":"W/\"411-19c025c8218\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"651fa6b2-d387-4044-8a1d-07910a98b1ac","timestamp":"2026-02-13 20:42:08"}
+ POST /api/logger 200 in 314ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"56bcaba0377bc6036df3630e8d373a8c908b9d11d5f7e8ac","x-request-id":"c670e37b-9033-459b-bbbb-683dead91e46"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=56bcaba0377bc6036df3630e8d373a8c908b9d11d5f7e8ac; x-request-id=c670e37b-9033-459b-bbbb-683dead91e46","host":"localhost:3002","if-modified-since":"Wed, 28 Jan 2026 02:09:03 GMT","if-none-match":"W/\"411-19c025c8218\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"f8a2a916-9890-4406-beaa-83e6d39b255e","timestamp":"2026-02-13 20:42:09"}
+ POST /api/logger 200 in 5ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"56bcaba0377bc6036df3630e8d373a8c908b9d11d5f7e8ac","x-request-id":"c670e37b-9033-459b-bbbb-683dead91e46"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=56bcaba0377bc6036df3630e8d373a8c908b9d11d5f7e8ac; x-request-id=c670e37b-9033-459b-bbbb-683dead91e46","host":"localhost:3002","if-modified-since":"Wed, 28 Jan 2026 02:09:03 GMT","if-none-match":"W/\"411-19c025c8218\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"05b39f84-6a03-4d56-b712-90af2e2c9eab","timestamp":"2026-02-13 20:42:09"}
+ POST /api/logger 200 in 10ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"56bcaba0377bc6036df3630e8d373a8c908b9d11d5f7e8ac","x-request-id":"c670e37b-9033-459b-bbbb-683dead91e46"},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=56bcaba0377bc6036df3630e8d373a8c908b9d11d5f7e8ac; x-request-id=c670e37b-9033-459b-bbbb-683dead91e46","host":"localhost:3002","if-modified-since":"Wed, 28 Jan 2026 02:09:03 GMT","if-none-match":"W/\"411-19c025c8218\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/farcaster.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/farcaster.json"},"requestId":"c92af528-ebd8-470a-b5b7-3592e7a88e6d","timestamp":"2026-02-13 20:42:09"}
+ POST /api/logger 200 in 9ms
+{"level":"info","request":{"cookies":{"__next_hmr_refresh_hash__":"56bcaba0377bc6036df3630e8d373a8c908b9d11d5f7e8ac","x-request-id":"c92af528-ebd8-470a-b5b7-3592e7a88e6d"},"headers":{"accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","cookie":"__next_hmr_refresh_hash__=56bcaba0377bc6036df3630e8d373a8c908b9d11d5f7e8ac; x-request-id=c92af528-ebd8-470a-b5b7-3592e7a88e6d","host":"localhost:3002","sec-fetch-dest":"empty","sec-fetch-mode":"no-cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/.well-known/appspecific/com.chrome.devtools.json","referrerPolicy":"","url":"http://localhost:3002/.well-known/appspecific/com.chrome.devtools.json"},"requestId":"5f974891-b4e9-42ac-8d04-74fc8140c57f","timestamp":"2026-02-13 20:43:02"}
+ POST /api/logger 200 in 11ms
+{"level":"info","request":{"cookies":{},"headers":{"accept":"*/*","accept-encoding":"gzip, deflate, br, zstd","accept-language":"en-US,en;q=0.9,es-US;q=0.8,es;q=0.7","connection":"keep-alive","host":"localhost:3002","if-modified-since":"Mon, 09 Feb 2026 15:26:33 GMT","if-none-match":"W/\"26a-19c4302f70d\"","referer":"http://localhost:3002/","sec-ch-ua":"\"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"144\", \"Google Chrome\";v=\"144\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Linux\"","sec-fetch-dest":"empty","sec-fetch-mode":"cors","sec-fetch-site":"same-origin","user-agent":"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36","x-forwarded-for":"::1","x-forwarded-host":"localhost:3002","x-forwarded-port":"3002","x-forwarded-proto":"http"},"method":"GET","path":"/manifest.json","referrerPolicy":"","url":"http://localhost:3002/manifest.json"},"requestId":"fdb6ad24-b6d5-446e-8671-1ecd8ba33ea0","timestamp":"2026-02-13 20:43:02"}
+ POST /api/logger 200 in 6ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 66.2s (2972 modules)
+Error: Route "/_not-found" used `cookies().get('x-request-id')`. `cookies()` should be awaited before using its value. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+    at RootLayout (src/app/layout.tsx:26:30)
+  24 |   children: React.ReactNode;
+  25 | }>) {
+> 26 |   const requestId = cookies().get("x-request-id")?.value;
+     |                              ^
+  27 |
+  28 |   return (
+  29 |     <html lang="en">
+ ⚠ Unsupported metadata themeColor is configured in metadata export in /.well-known/appspecific/com.chrome.devtools.json. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ ⚠ Unsupported metadata viewport is configured in metadata export in /.well-known/appspecific/com.chrome.devtools.json. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+ GET /.well-known/appspecific/com.chrome.devtools.json 404 in 68272ms
+[?25h

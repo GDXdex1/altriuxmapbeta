@@ -1,0 +1,78 @@
+#[test_only]
+module altriux::altriux_worker_test {
+    use sui::test_scenario;
+    use sui::coin::{Self};
+    use sui::clock::{Self};
+    use altriux::altriuxworkers::{Self, WorkerPool};
+    use altriux::altriuxpopulation::{Self, PopulationRegistry};
+    use altriux::altriuxutilitytokens::{EST, Self};
+    use altriux::altriuxresources::{Self};
+    use altriux::altriuxhero::{Self};
+    use altriux::altriuxfood;
+
+    #[test]
+    fun test_hire_and_feed_worker() {
+        let owner = @0xA;
+        let scenario_val = test_scenario::begin(owner);
+        let scenario = &mut scenario_val;
+        
+        // 1. Setup Clocks, Pop, Pool, Currency
+        let clock = clock::create_for_testing(test_scenario::ctx(scenario));
+        let mut est_treasury = altriuxutilitytokens::create_est_treasury_for_testing(test_scenario::ctx(scenario));
+        let mut pop_reg = altriuxpopulation::create_population_registry(1000, test_scenario::ctx(scenario));
+        
+        altriuxpopulation::found_settlement(&mut pop_reg, 4, 1, test_scenario::ctx(scenario)); // Village at land 1
+        // Ensure claimed population exists
+        altriuxpopulation::block_workers_for_construction(&mut pop_reg, 1, 10, 0); // Hack to init tables if needed, or just relying on deduct logic
+
+        altriuxworkers::init_for_testing(test_scenario::ctx(scenario));
+        
+        test_scenario::next_tx(scenario, owner);
+        let mut pool = test_scenario::take_shared<WorkerPool>(scenario);
+        
+        // Mint payment
+        let payment = coin::mint_for_testing<EST>(40_000_000_000, test_scenario::ctx(scenario));
+        
+        // Hire Worker (Annual)
+        let worker = altriuxworkers::hire_worker(
+            &mut pool,
+            &mut pop_reg,
+            payment,
+            true, // Annual
+            1, // Land ID
+            &clock,
+            test_scenario::ctx(scenario)
+        );
+
+        // Test Diet
+        let hero = altriuxhero::create_hero(b"TestHero", 0, 1, 0, test_scenario::ctx(scenario)); // Drantium (Standard)
+        
+        // Add food to worker inventory
+        let inv = altriuxworkers::get_worker_inventory(&mut worker);
+        altriuxresources::add_jax(inv, altriuxfood::JAX_WHEAT(), 10, 0, &clock);
+        altriuxresources::add_jax(inv, altriuxfood::JAX_WINE(), 5, 0, &clock); // Using Wine as drink
+        
+        // Consume
+        altriuxworkers::consume_rations_specific(
+            &mut worker,
+            &hero,
+            altriuxfood::JAX_WHEAT(),
+            altriuxfood::JAX_WINE(),
+            0, 0, 0, 0, 0, // Unused for standard
+            &clock
+        );
+
+        // Clean up
+        altriuxhero::destroy_hero_for_testing(hero);
+        transfer::public_transfer(worker, owner); // Keep it alive or destroy? 
+        // Need destroy function for worker really, or just let test end cleanup handle it if pure object? 
+        // Move tests usually strict on return.
+
+        test_scenario::return_shared(pool);
+        test_scenario::return_shared(pop_reg);
+        clock::destroy_for_testing(clock);
+        // ... cleanup logic ...
+        
+        test_scenario::end(scenario_val);
+    }
+}

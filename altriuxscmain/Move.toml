@@ -1,0 +1,10 @@
+[package]
+name = "altriuxscmain"
+version = "1.0.0"
+edition = "2024.beta"
+
+[addresses]
+altriux = "0x0"
+
+[package.config]
+optimization_level = "aggressive"

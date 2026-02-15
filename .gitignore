@@ -1,0 +1,16 @@
+/.next
+/node_modules
+
+.DS_Store
+next.log
+.vercel
+
+output.log
+error.log
+
+core
+.env*.local
+token-key
+agent-tester-info.md
+map-tiles-analysis.md
+altriuxworldbeta/

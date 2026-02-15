@@ -1,0 +1,25 @@
+{
+  "miniapp": {
+    "version": "1",
+    "name": "SuiDapp Setup Assistant",
+    "iconUrl": "https://usdozf7pplhxfvrl.public.blob.vercel-storage.com/thumbnail_82ebd1e2-3510-4414-9313-b9fccbffab66-tNDzQNt50WUhUncbOD6gWhgUoHpzwo",
+    "homeUrl": "https://mixture-cannot-242.app.ohara.ai",
+    "imageUrl": "https://usdozf7pplhxfvrl.public.blob.vercel-storage.com/thumbnail_82ebd1e2-3510-4414-9313-b9fccbffab66-tNDzQNt50WUhUncbOD6gWhgUoHpzwo",
+    "buttonTitle": "Open with Ohara",
+    "splashImageUrl": "https://usdozf7pplhxfvrl.public.blob.vercel-storage.com/farcaster/splash_images/splash_image1.svg",
+    "splashBackgroundColor": "#ffffff",
+    "tags": [
+      "ohara",
+      "mini-app",
+      "base",
+      "farcaster"
+    ],
+    "primaryCategory": "entertainment",
+    "ogTitle": "SuiDapp Setup Assistant",
+    "ogImageUrl": "https://usdozf7pplhxfvrl.public.blob.vercel-storage.com/thumbnail_82ebd1e2-3510-4414-9313-b9fccbffab66-tNDzQNt50WUhUncbOD6gWhgUoHpzwo",
+    "screenshotUrls": []
+  },
+  "baseBuilder": {
+    "ownerAddress": ""
+  }
+}

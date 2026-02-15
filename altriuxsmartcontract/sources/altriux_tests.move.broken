@@ -1,0 +1,212 @@
+#[test_only]
+module altriux::altriux_tests {
+    use sui::test_scenario::{Self, Scenario};
+    use sui::clock::{Self, Clock};
+    use sui::object::{Self};
+    use std::option;
+    use altriux::altriuxland::{Self, Land};
+    use altriux::altriuxagriculture::{Self};
+    use altriux::altriuxresources::{Self, Inventory};
+    use altriux::altriuxagstats;
+    use altriux::altriuxbooks::{Self, Book};
+    use altriux::altriuxhero::{Self, Hero};
+    use altriux::altriuxitems;
+
+    // Test Addresses
+    const ADMIN: address = @0xAD;
+    const USER: address = @0x42;
+    const CREATOR_1: address = @0x554a2392980b0c3e4111c9a0e8897e632d41847d04cbd41f9e081e49ba2eb04a;
+    const CREATOR_2: address = @0xf2a0919d5a077df0fe4317f008729072fd9e39076b8b087ef8f48bacf00ded0c;
+
+    use altriux::altriuxanimal::{Self, Animal};
+
+    #[test]
+    fun test_land_hierarchy_ids() {
+        // Test Level 1: Hex=123, Level 2: xLand=456, Level 3: Parcel=78
+        let hex_idx = 123;
+        let xland_idx = 456;
+        let parcel_idx = 78;
+
+        let tile_id = altriuxland::compute_tile_id(hex_idx, xland_idx, parcel_idx);
+        let (h, xl, p) = altriuxland::decompose_tile_id(tile_id);
+
+        assert!(h == hex_idx, 0);
+        assert!(xl == xland_idx, 1);
+        assert!(p == parcel_idx, 2);
+    }
+
+    #[test]
+    fun test_agricultural_biome_mapping() {
+        let scenario = test_scenario::begin(ADMIN);
+        let ctx = test_scenario::ctx(&mut scenario);
+
+        // Case 1: Plains (Base)
+        let l1 = altriuxland::create_land_for_testing(
+            1, 1, false, false, // parent
+            0, 0, false, false, // subland
+            0, 0, 6, 0, false, false, 0, // biome_type 6 = PLAINS
+            ctx
+        );
+        assert!(altriuxland::get_agricultural_biome(&l1) == 2, 10); // Ag-Plains = 2
+
+        // Case 2: Meadow + Forest Characteristic
+        let l2 = altriuxland::create_land_for_testing(
+            1, 1, false, false,
+            0, 1, false, false,
+            0, 2, 5, 0, false, false, 0, // feature 2 = FOREST, biome 5 = MEADOW
+            ctx
+        );
+        assert!(altriuxland::get_agricultural_biome(&l2) == 3, 20); // Ag-Forest = 3 overrides base
+
+        cleanup_land(l1);
+        cleanup_land(l2);
+        test_scenario::end(scenario);
+    }
+
+    #[test]
+    fun test_agriculture_parcel_flow() {
+        let scenario = test_scenario::begin(ADMIN);
+        let clock = clock::create_for_testing(test_scenario::ctx(&mut scenario));
+        
+        test_scenario::next_tx(&mut scenario, USER);
+        let ctx = test_scenario::ctx(&mut scenario);
+        
+        // 1. Setup Land (Meadow)
+        let land = altriuxland::create_land_for_testing(
+            10, 10, false, false,
+            5, 5, false, false,
+            0, 0, 5, 0, false, false, 0, // biome 5 = MEADOW
+            ctx
+        );
+
+        // 2. Setup Inventory with Seeds (Wheat ID=1)
+        let inv = altriuxresources::create_inventory(USER, ctx);
+        altriuxresources::add_jax(&mut inv, 1, 1000, 0, &clock); // Give 1000 BP (10 Jak) of wheat seeds
+
+        // 3. Sow on Parcel index 42
+        altriuxagriculture::sow(&mut land, 42, &mut inv, 1, &clock, ctx);
+
+        // 4. Advance Time (Wheat growth days = 180)
+        clock::set_for_testing(&mut clock, 181 * 86400 * 1000);
+
+        // 5. Harvest from Parcel index 42
+        altriuxagriculture::harvest(&mut land, 42, &mut inv, &clock, ctx);
+
+        // 6. Cleanup
+        cleanup_land(land);
+        cleanup_inv(inv);
+        clock::destroy_for_testing(clock);
+        test_scenario::end(scenario);
+    }
+
+    #[test]
+    fun test_library_system() {
+        let scenario = test_scenario::begin(ADMIN);
+        let clock = clock::create_for_testing(test_scenario::ctx(&mut scenario));
+        
+        // 1. Init MasterLibrary
+        altriuxbooks::init_library(test_scenario::ctx(&mut scenario));
+        
+        test_scenario::next_tx(&mut scenario, CREATOR_1);
+        let lib = test_scenario::take_shared<altriuxbooks::MasterLibrary>(&scenario);
+        
+        // 2. Claim Library (Jhoux) - Should receive 50 books
+        altriuxbooks::claim_jhoux_library(&mut lib, test_scenario::ctx(&mut scenario));
+        
+        test_scenario::next_tx(&mut scenario, CREATOR_1);
+        // Verify one of the books (e.g., "Ciencia de nuestro planeta")
+        let b = test_scenario::take_from_address<Book>(&scenario, CREATOR_1);
+        
+        // 3. Setup Worker with Mastery S2_GEN_2 (ID 2)
+        test_scenario::next_tx(&mut scenario, USER);
+        let hero = altriuxhero::create_hero(b"Copista", altriuxhero::male(), altriuxhero::drantium(), 0, test_scenario::ctx(&mut scenario));
+        let points = altriuxhero::get_science_points_mut(&mut hero);
+        sui::table::add(points, 2, 100); // Give enough points for mastery
+        let m = altriuxhero::get_masteries_mut(&mut hero);
+        sui::table::add(m, 2, true); // Artificially give mastery
+        
+        // 4. Transcription Resources
+        let inv = altriuxresources::create_inventory(USER, test_scenario::ctx(&mut scenario));
+        altriuxresources::add_jax(&mut inv, 221, 100, 0, &clock); // Paper
+        altriuxresources::add_jax(&mut inv, 222, 100, 0, &clock); // Ink
+        altriuxresources::add_jax(&mut inv, 223, 10, 0, &clock);  // Quill
+        
+        // 5. Transcribe
+        let b_copy = altriuxbooks::transcribe_book(&b, &mut hero, &mut inv, &clock, test_scenario::ctx(&mut scenario));
+        
+        // 6. Verification
+        assert!(altriuxhero::is_locked(&hero, clock::timestamp_ms(&clock)), 100);
+        
+        // Cleanup
+        altriuxbooks::destroy_book_for_testing(b);
+        altriuxbooks::destroy_book_for_testing(b_copy);
+        altriuxhero::destroy_hero_for_testing(hero);
+        cleanup_inv(inv);
+        test_scenario::return_shared(lib);
+        clock::destroy_for_testing(clock);
+        test_scenario::end(scenario);
+    }
+
+    #[test]
+    fun test_animal_breeding_cycle() {
+        let scenario = test_scenario::begin(ADMIN);
+        let clock = clock::create_for_testing(test_scenario::ctx(&mut scenario));
+        let ctx = test_scenario::ctx(&mut scenario);
+
+        // 1. Create a male and female Burro (Donkey)
+        let male = altriuxanimal::create_animal_for_testing(18, 0, 100, ctx); // BURRO, MALE, Tile 100
+        let female = altriuxanimal::create_animal_for_testing(19, 1, 100, ctx); // BURRA, FEMALE, Tile 100
+
+        // 2. Mate them
+        altriuxanimal::mate(&male, &mut female, &clock);
+        
+        // 3. Advance time (Donkey gestation is 365 days / 4 = 91.25 days)
+        let gest_ms = (365 * 24 * 3600 * 1000) / 4;
+        clock::set_for_testing(&mut clock, gest_ms + 1000);
+
+        // 4. Claim offspring
+        let offspring = altriuxanimal::claim_offspring(&mut female, &clock, ctx);
+
+        // 5. Verification
+        assert!(altriuxanimal::get_tile_id(&offspring) == 100, 501); // Inherited tile
+        assert!(altriuxanimal::get_animal_gender(&offspring) == 0 || altriuxanimal::get_animal_gender(&offspring) == 1, 502);
+
+        // Cleanup
+        altriuxanimal::destroy_animal_for_testing(male);
+        altriuxanimal::destroy_animal_for_testing(female);
+        altriuxanimal::destroy_animal_for_testing(offspring);
+        clock::destroy_for_testing(clock);
+        test_scenario::end(scenario);
+    }
+
+    #[test]
+    fun test_inventory_volume_tracking() {
+        let scenario = test_scenario::begin(ADMIN);
+        let clock = clock::create_for_testing(test_scenario::ctx(&mut scenario));
+        let ctx = test_scenario::ctx(&mut scenario);
+        
+        let inv = altriuxresources::create_inventory(USER, ctx);
+        
+        // 1. Add 1 Tobo (Bucket) - 20L (1 Jix)
+        altriuxresources::add_jax(&mut inv, altriuxitems::tobo(), 1, 0, &clock);
+        assert!(altriuxresources::total_volume(&inv) == 20000, 301);
+        assert!(altriuxresources::total_weight(&inv) == 1000, 302); // 1kg
+        
+        // 2. Add 1 Yunque (Anvil) - 13L, 100kg (5 Jax)
+        altriuxresources::add_jax(&mut inv, altriuxitems::yunque(), 1, 0, &clock);
+        assert!(altriuxresources::total_volume(&inv) == 33000, 303); // 20 + 13
+        assert!(altriuxresources::total_weight(&inv) == 101000, 304); // 1 + 100
+        
+        cleanup_inv(inv);
+        clock::destroy_for_testing(clock);
+        test_scenario::end(scenario);
+    }
+
+    fun cleanup_land(l: Land) {
+        altriuxland::destroy_land_for_testing(l);
+    }
+
+    fun cleanup_inv(inv: Inventory) {
+        altriuxresources::destroy_inventory_for_testing(inv);
+    }
+}

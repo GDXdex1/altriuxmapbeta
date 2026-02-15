@@ -1,0 +1,22 @@
+{
+  "name": "Altriux World - Drariux Network",
+  "short_name": "Altriux",
+  "description": "Explore the massive Earth-sized hexagonal world with tribes, resources, and blockchain ownership",
+  "start_url": "/altriux-world",
+  "display": "fullscreen",
+  "background_color": "#000000",
+  "theme_color": "#3b82f6",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "https://careful-lavender-rabbit.myfilebase.com/ipfs/QmaLfvBSTQgtBfj4GQhQnP5jQzhPivCmMPb7q4J2navHwT",
+      "sizes": "192x192 512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": [
+    "games",
+    "entertainment"
+  ],
+  "screenshots": []
+}
